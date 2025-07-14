@@ -2,6 +2,7 @@
   <el-dialog
       title="弹窗标题"
       draggable
+      append-to-body
       destroy-on-close
       v-model="dialogVisible">
     <div>弹窗内容</div>
