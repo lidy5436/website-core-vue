@@ -39,6 +39,8 @@
 <script setup>
 import {reactive, ref} from "vue";
 
+// 自定义事件
+const emit = defineEmits(['confirm'])
 // 弹窗打开标识
 const dialogVisible = ref(false);
 // 表单内容
@@ -52,7 +54,6 @@ const options = [
   {value: 0, label: '通过'},
   {value: 1, label: '拒绝'},
 ]
-
 // 打开方法
 const open = () => dialogVisible.value = true;
 // 关闭方法
@@ -63,6 +64,7 @@ const handleCancel = () => {
 }
 // 确认方法
 const handleSubmit = () => {
+  emit("confirm",{...form})
   close()
 }
 
