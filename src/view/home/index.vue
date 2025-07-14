@@ -8,7 +8,7 @@
       </el-col>
       <el-col :span="4">
         <el-card header="审核弹窗">
-          <el-button type="success" @click="handleOpenAuthDialog">打开审核弹窗</el-button>
+          <el-button type="success" @click="handleOpenAuthDialog"  >打开审核弹窗</el-button>
         </el-card>
       </el-col>
     </el-row>
@@ -18,7 +18,7 @@
   <!-- 基础弹窗 -->
   <basic-dialog ref="basicDialogRef"/>
   <!-- 审核弹窗 -->
-  <basic-auth-dialog ref="basicAuthDialogRef"/>
+  <basic-auth-dialog ref="basicAuthDialogRef" @confirm="handleConfirm"/>
 
 </template>
 
@@ -40,6 +40,10 @@ const basicAuthDialogRef = ref(undefined);
 // 打开审核弹窗
 const handleOpenAuthDialog = () => {
   basicAuthDialogRef.value.open()
+}
+// 弹窗确认的回调
+const handleConfirm = (formData) => {
+  console.log('收到审核结果:', formData)
 }
 </script>
 
