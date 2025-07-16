@@ -71,10 +71,6 @@ const dataList = computed(()=> {
 // 动态计算总数量
 const total = computed(()=> props.data.length);
 
-
-
-
-
 defineExpose({
   open,
   close
