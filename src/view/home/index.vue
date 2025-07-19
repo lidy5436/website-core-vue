@@ -16,6 +16,11 @@
           <el-button type="primary" @click="handleOpenTableDialog">打开表格弹窗</el-button>
         </el-card>
       </el-col>
+      <el-col :span="4">
+        <el-card header="元素拖拽">
+          <el-button type="success" @click="handleToLink('/draggable')" >打开拖拽案例</el-button>
+        </el-card>
+      </el-col>
     </el-row>
 
   </div>
@@ -33,7 +38,9 @@ import {ref} from "vue";
 import BasicDialog from '@/components/basicDialog/index.vue'
 import BasicAuthDialog from '@/components/basicAuthDialog/index.vue'
 import BasicTableDialog from '@/components/basicTableDialog/index.vue'
+import {useRouter} from "vue-router";
 
+const router = useRouter()
 
 // 基础弹窗
 const basicDialogRef = ref(undefined)
@@ -87,6 +94,11 @@ const tableData = [
   {code: "024", name: "施六", age: 22, address: "海南海口"},
   {code: "025", name: "张七", age: 23, address: "天津南开"}
 ];
+
+// 跳转到新页面
+const handleToLink = (url) => {
+  router.push(url)
+}
 </script>
 
 <style scoped>
