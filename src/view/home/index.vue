@@ -16,11 +16,6 @@
           <el-button type="primary" @click="handleOpenTableDialog">打开表格弹窗</el-button>
         </el-card>
       </el-col>
-      <el-col :span="4">
-        <el-card header="元素拖拽">
-          <el-button type="success" @click="handleToLink('/draggable')" >打开拖拽案例</el-button>
-        </el-card>
-      </el-col>
     </el-row>
 
   </div>

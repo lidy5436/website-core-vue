@@ -8,10 +8,6 @@ const routes = [
         path: '/',
         component: Home,
     },
-    {
-        path: '/draggable',
-        component: basicDraggable,
-    }
 ]
 
 const router = createRouter({
