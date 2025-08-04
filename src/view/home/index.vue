@@ -21,6 +21,11 @@
           <el-button type="success" @click="handleToLink('/textScrolling')">文字跑马灯</el-button>
         </el-card>
       </el-col>
+      <el-col :span="4">
+        <el-card header="环形旋转">
+          <el-button type="primary" @click="handleToLink('/circularRotation')">环形旋转</el-button>
+        </el-card>
+      </el-col>
     </el-row>
 
   </div>
