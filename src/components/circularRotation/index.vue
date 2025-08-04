@@ -15,10 +15,12 @@
 </script>
 
 <style lang="scss" scoped>
+@use "sass:math";
+
 $size: 600px;
 $imgSize: 128px;
 $n: 5;
-$pDeg: 360deg / $n;
+$pDeg: math.div(360deg, $n) ;
 
 .container-wrapper{
   background-color: white;
@@ -43,7 +45,7 @@ $pDeg: 360deg / $n;
       position: absolute;
       top: 0;
       left: 50%;
-      transform-origin: center ($imgSize/2 + $size/2);
+      transform-origin: center ( math.div($imgSize,2) + math.div($size,2));
       transform: translateY(-50%) translateX(-50%);
 
       @for $i from 1 through $n {
