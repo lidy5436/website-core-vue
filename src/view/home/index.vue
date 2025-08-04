@@ -26,6 +26,11 @@
           <el-button type="primary" @click="handleToLink('/circularRotation')">环形旋转</el-button>
         </el-card>
       </el-col>
+      <el-col :span="4">
+        <el-card header="sass星空">
+          <el-button type="primary" @click="handleToLink('/starrySky')">sass星空</el-button>
+        </el-card>
+      </el-col>
     </el-row>
 
   </div>
