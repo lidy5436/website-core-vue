@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from "vue-router";
 import TextScrolling from '@/components/textScrolling/index.vue'
 import CircularRotation from '@/components/circularRotation/index.vue'
 import StarrySky from '@/components/starrySky/index.vue'
+import ParallaxRotation from '@/components/parallaxRotation/index.vue'
 
 
 const routes = [
@@ -21,6 +22,10 @@ const routes = [
     {
         path: '/starrySky',
         component: StarrySky
+    },
+    {
+        path: '/parallaxRotation',
+        component: ParallaxRotation
     }
 ]
 
