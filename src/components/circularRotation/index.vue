@@ -17,8 +17,8 @@
 <style lang="scss" scoped>
 @use "sass:math";
 
-$size: 600px;
-$imgSize: 128px;
+$size: 400px;
+$imgSize: 100px;
 $n: 5;
 $pDeg: math.div(360deg, $n) ;
 
