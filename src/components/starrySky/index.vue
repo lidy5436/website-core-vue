@@ -15,17 +15,18 @@
 
 <style lang="scss" scoped>
 @use "sass:math";
+@use "sass:string";
 
 $n: 5;
 $duration: 400;
 $count: 1000;
 
 @function star($n) {
-  $result: '#{random(100)}vw #{random(100)}vh #fff';
+  $result: '#{math.random(100)}vw #{math.random(100)}vh #fff';
   @for $i from 2 through $n {
-    $result: '#{$result},#{random(100)}vw #{random(100)}vh #fff'
+    $result: '#{$result},#{math.random(100)}vw #{math.random(100)}vh #fff'
   }
-  @return unquote($result) ;
+  @return string.unquote($result) ;
 }
 
 .container-wrapper {
@@ -41,8 +42,8 @@ $count: 1000;
   }
 
   @for $i from 1 through $n {
-    $duration: floor(math.div($duration,2));
-    $count: floor(math.div($count,2));
+    $duration: math.floor(math.div($duration,2));
+    $count: math.floor(math.div($count,2));
     .layer#{$i} {
       position: fixed;
       left: 0;
