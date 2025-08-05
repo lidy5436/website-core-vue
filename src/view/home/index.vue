@@ -38,6 +38,11 @@
           <el-button type="success" @click="handleToLink('/parallaxRotation')">视差旋转</el-button>
         </el-card>
       </el-col>
+      <el-col :span="4">
+        <el-card header="拖拽排序">
+          <el-button type="primary" @click="handleToLink('/dropSort')">拖拽排序</el-button>
+        </el-card>
+      </el-col>
     </el-row>
 
   </div>

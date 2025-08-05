@@ -4,6 +4,7 @@ import TextScrolling from '@/components/textScrolling/index.vue'
 import CircularRotation from '@/components/circularRotation/index.vue'
 import StarrySky from '@/components/starrySky/index.vue'
 import ParallaxRotation from '@/components/parallaxRotation/index.vue'
+import DropSort from '@/components/dropSort/index.vue'
 
 
 const routes = [
@@ -26,6 +27,10 @@ const routes = [
     {
         path: '/parallaxRotation',
         component: ParallaxRotation
+    },
+    {
+        path: '/dropSort',
+        component: DropSort
     }
 ]
 
